@@ -7,6 +7,7 @@ const errorHandler = require("./middlewares/errorHandler");
 const authRoutes = require("./modules/auth/auth.routes");
 const expenseRoutes = require("./modules/expense/expense.routes");
 const incomeRoutes = require("./modules/income/income.routes");
+const goalRoutes = require("./modules/goal/goal.routes");
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.get("/health", (req, res) => res.json({ status: "ok" }));
 app.use("/api/auth", authRoutes);
 app.use("/api/expenses", expenseRoutes);
 app.use("/api/income", incomeRoutes);
+app.use("/api/goals", goalRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
