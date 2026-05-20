@@ -8,6 +8,7 @@ const authRoutes = require("./modules/auth/auth.routes");
 const expenseRoutes = require("./modules/expense/expense.routes");
 const incomeRoutes = require("./modules/income/income.routes");
 const goalRoutes = require("./modules/goal/goal.routes");
+const budgetRoutes = require("./modules/budget/budget.routes");
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/expenses", expenseRoutes);
 app.use("/api/income", incomeRoutes);
 app.use("/api/goals", goalRoutes);
+app.use("/api/budget", budgetRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
