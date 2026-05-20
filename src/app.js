@@ -5,6 +5,7 @@ const notFound = require("./middlewares/notFound");
 const errorHandler = require("./middlewares/errorHandler");
 
 const authRoutes = require("./modules/auth/auth.routes");
+const expenseRoutes = require("./modules/expense/expense.routes");
 
 const app = express();
 
@@ -17,7 +18,7 @@ app.use(cors({
 app.get("/health", (req, res) => res.json({ status: "ok" }));
 
 app.use("/api/auth", authRoutes);
-
+app.use("/api/expenses", expenseRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
