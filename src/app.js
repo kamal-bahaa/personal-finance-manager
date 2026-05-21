@@ -11,6 +11,7 @@ const goalRoutes = require("./modules/goal/goal.routes");
 const budgetRoutes = require("./modules/budget/budget.routes");
 const profileRoutes = require("./modules/profile/profile.routes");
 const dashboardRoutes = require("./modules/dashboard/dashboard.routes");
+const analyticsRoutes = require("./modules/analytics/analytics.routes");
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.use("/api/goals", goalRoutes);
 app.use("/api/budget", budgetRoutes);
 app.use("/api/profile", profileRoutes);
 app.use("/api/dashboard", dashboardRoutes);
+app.use("/api/analytics", analyticsRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
