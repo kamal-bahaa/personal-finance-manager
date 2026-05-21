@@ -12,6 +12,7 @@ const budgetRoutes = require("./modules/budget/budget.routes");
 const profileRoutes = require("./modules/profile/profile.routes");
 const dashboardRoutes = require("./modules/dashboard/dashboard.routes");
 const analyticsRoutes = require("./modules/analytics/analytics.routes");
+const summaryRoutes = require("./modules/summary/summary.routes");
 
 const app = express();
 
@@ -31,6 +32,7 @@ app.use("/api/budget", budgetRoutes);
 app.use("/api/profile", profileRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/analytics", analyticsRoutes);
+app.use("/api/summary", summaryRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
